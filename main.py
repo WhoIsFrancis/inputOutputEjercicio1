@@ -1,13 +1,15 @@
 # Creacion
 import os.path
 
-if not os.path.exists('archivo.txt'):
+archivo = input("Ingrese el nombre de su archivo: ")
+
+if not os.path.exists(archivo):
     print("Creando archivo...")
-    f = open('archivo.txt', 'xt')
+    f = open(archivo, 'xt')
     f.close()
 
 else:
-    f = open('archivo.txt', "wt")
+    f = open(archivo, "wt")
     datos = input("Ingrese los datos a escribir en el archivo: ")
     f.writelines(datos)
     f.close()
