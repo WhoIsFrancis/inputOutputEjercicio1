@@ -11,5 +11,14 @@ if not os.path.exists(archivo):
 else:
     f = open(archivo, "wt")
     datos = input("Ingrese los datos a escribir en el archivo: ")
-    f.write(datos)
+    f.write(datos + "\n")
     f.close()
+
+    # Segunda escritura
+    file = open(archivo, 'r+')
+    file.readline()
+    file.write('Segunda escritura en archivo.\n')
+
+    file.seek(0)
+    print(file.read())
+    file.close()
