@@ -11,5 +11,5 @@ if not os.path.exists(archivo):
 else:
     f = open(archivo, "wt")
     datos = input("Ingrese los datos a escribir en el archivo: ")
-    f.writelines(datos)
+    f.write(datos)
     f.close()
